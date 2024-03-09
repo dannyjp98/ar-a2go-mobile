@@ -4,11 +4,11 @@
 	using Mapbox.Unity.Location;
 	using UnityEngine;
 	using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using Mapbox.Utils;
-using Mapbox.Unity.Map;
+	using System.Collections.Generic;
+	using UnityEngine;
+	using UnityEngine.SceneManagement;
+	using Mapbox.Utils;
+	using Mapbox.Unity.Map;
 
 
 	public class InitializeMapWithLocationProvider : MonoBehaviour
@@ -56,10 +56,25 @@ using Mapbox.Unity.Map;
 				Vector3 randomOffset = new Vector3(offsetX, offsetY, offsetZ);
 
 				// Add the random offset to the scene position
-				//scene_position += randomOffset;
+				scene_position += randomOffset;
 
 				GameObject new_object = Instantiate(obj_to_spawn);
 				new_object.transform.position = scene_position;
+                tree.tree_obj = new_object;
+
+				float scaleFactor = tree.growth_percentage;
+				Vector3 newScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
+				new_object.transform.localScale = newScale;
+
+				if (tree.has_squirrel)
+				{
+                    GameObject squirrel_obj = TreeManager.treeDictionary["squirrel"];
+
+					Vector3 offset = new Vector3(0, 15, 0);
+                    GameObject squirrel = Instantiate(squirrel_obj);
+                    squirrel.transform.position = scene_position + offset + randomOffset;
+                    squirrel.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+                }
 			}
 		}
 	}

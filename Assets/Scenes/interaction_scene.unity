@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -505,9 +505,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 223974227}
-  pine: {fileID: 2441779057326299809, guid: 19362d91ee92c6701b067da38b61ecca, type: 3}
-  maple: {fileID: 4586183935837940532, guid: 7efdb8014b1a7d0e8a1c26bf74dd3e0d, type: 3}
   spawn_sound_effect: {fileID: 8300000, guid: ce408681c72ca4e4695251acf937779c, type: 3}
+  acorn_spawn_noise: {fileID: 8300000, guid: f39daaab9de8342d1bf9b1f62985a7d1, type: 3}
+  squirrel_prefab: {fileID: 1711078605321064275, guid: b0bd8722aa1224581a51549926d4bc37,
+    type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

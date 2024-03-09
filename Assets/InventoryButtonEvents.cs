@@ -18,15 +18,27 @@ public class InventoryButtonEvents : MonoBehaviour
     }
 
     public void onClick(string name){
+        if (SeedManager.GetQuantity(name) == 0) return;
+        if (SceneManager.GetActiveScene().name == "exploration_scene") return;
+
         ARObjectSpawner obj = FindObjectOfType<ARObjectSpawner>();
         if(obj == null) return;
+
         obj.SpawnAtCursor(TreeManager.treeDictionary[name]);
-
-        if(SceneManager.GetActiveScene().name == "exploration_scene") return;
-
-        if(SeedManager.GetQuantity(name) > 0){
-            SeedManager.AddQuantity(name, -1);
-            TreeManager.createTree(name, EditorLocationProviderLocationLog.current_player_position);
-        }
+        SeedManager.AddQuantity(name, -1);
+        TreeManager.createTree(name, EditorLocationProviderLocationLog.current_player_position);
+       
     }
+
+    public void shootAcorn(GameObject acorn_game_obj)
+    {
+        if (SceneManager.GetActiveScene().name == "exploration_scene") return;
+        if (SeedManager.GetQuantity("acorn") == 0) return;
+        Debug.Log("here");
+
+        ARObjectSpawner obj = FindObjectOfType<ARObjectSpawner>();
+        obj.ShootObject(acorn_game_obj);
+        SeedManager.AddQuantity("acorn", -1);
+    }
+
 }

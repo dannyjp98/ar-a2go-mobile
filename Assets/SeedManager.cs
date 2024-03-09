@@ -14,13 +14,15 @@ public class SeedManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        seed_quantity["maple"] = 2;
-        seed_quantity["pine"] = 3;
-        seed_quantity["oak"] = 2;
-        seed_quantity["walnut"] = 3;
-        seed_quantity["chestnut"] = 2;
-        seed_quantity["coconut"] = 3;
+        seed_quantity["acorn"] = 5;
+        seed_quantity["maple"] = 0;
+        seed_quantity["pine"] = 2;
+        seed_quantity["oak"] = 0;
+        seed_quantity["walnut"] = 0;
+        seed_quantity["chestnut"] = 0;
+        seed_quantity["coconut"] = 0;
 
+        seedMoney.Add("acorn", 100);
         seedMoney.Add("pine", 450);
         seedMoney.Add("maple", 150);
         seedMoney.Add("chestnut", 250);
