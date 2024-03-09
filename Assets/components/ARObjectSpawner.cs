@@ -6,30 +6,28 @@ using UnityEngine.SceneManagement;
 public class ARObjectSpawner : MonoBehaviour
 {
     public Transform cursor;
-    public GameObject gameobject_to_spawn;
-    public GameObject gameobject_to_spawn_2;
+    public GameObject pine;
+    public GameObject maple;
 
     public AudioClip spawn_sound_effect;
 
-    public void SpawnGameobjectAtCursor()
+    public void SpawnAtCursor(GameObject obj)
     {
-        GameObject new_object = Instantiate(gameobject_to_spawn);
+        GameObject new_object = Instantiate(obj);
         new_object.transform.SetPositionAndRotation(cursor.position, cursor.rotation);
-
-        AudioSource.PlayClipAtPoint(spawn_sound_effect, Camera.main.transform.position);
-    }
-
-    public void SpawnGameobjectAtCursor2()
-    {
-        GameObject new_object = Instantiate(gameobject_to_spawn_2);
-        new_object.transform.SetPositionAndRotation(cursor.position, cursor.rotation);
-
+        new_object.transform.localScale = new Vector3(.1f, .1f,.1f); // Replace xScale, yScale, zScale with desired scale values
         AudioSource.PlayClipAtPoint(spawn_sound_effect, Camera.main.transform.position);
     }
 
     public void SwitchModes()
     {
         SceneManager.LoadScene("exploration_scene");
+    }
+
+    void Start(){
+        GameObject new_object = Instantiate(TreeManager.treeDictionary[TreeManager.nearestTree.tree_type]);
+        float newsize = TreeManager.nearestTree.growth_percentage * 0.1f;
+        new_object.transform.localScale = new Vector3(newsize, newsize, newsize);
     }
 }
 

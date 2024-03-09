@@ -7,6 +7,8 @@
 	using Mapbox.Unity.Utilities;
 	using Mapbox.Utils;
 	using UnityEngine;
+	using Mapbox.Unity.Map;
+
 
 	/// <summary>
 	/// <para>
@@ -53,7 +55,9 @@
 				_logReader = null;
 			}
 		}
-Vector2d current_player_position = new Vector2d(42.279594,-83.732124);
+		    public AbstractMap map; // Reference to your Mapbox map
+
+		public static Vector2d current_player_position = new Vector2d(42.279594,-83.732124);
 		float speed = 0.0001f;
 
 		private void Update(){
@@ -75,6 +79,8 @@ Vector2d current_player_position = new Vector2d(42.279594,-83.732124);
 			new_location.LatitudeLongitude = current_player_position;
 			
 			_currentLocation = new_location;
+			map.SetCenterLatitudeLongitude(current_player_position);
+
 
 		}
 

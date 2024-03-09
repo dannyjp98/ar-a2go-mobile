@@ -410,6 +410,10 @@
 "Assets/components/ARObjectSpawner.cs"
 "Assets/components/ConstantMovement.cs"
 "Assets/components/ConstantRotation.cs"
+"Assets/InventoryButtonEvents.cs"
+"Assets/InventoryCanvas.cs"
+"Assets/LatLongAnchor.cs"
+"Assets/OrbitPlayer.cs"
 "Assets/other/demo/components/ARTapToPlaceObject.cs"
 "Assets/other/ExampleAssets/Scripts/AnchorCreator.cs"
 "Assets/other/ExampleAssets/Scripts/ARFeatheredPlaneMeshVisualizer.cs"
@@ -777,6 +781,11 @@
 "Assets/other/Mapbox/Unity/Utilities/TelemetryConfigurationButton.cs"
 "Assets/other/Mapbox/Unity/Utilities/VectorEntity.cs"
 "Assets/other/Mapbox/Unity/Utilities/VectorExtensions.cs"
+"Assets/SeedManager.cs"
+"Assets/SeedQuantityText.cs"
+"Assets/SeedQuantityText1.cs"
+"Assets/SwitchModes.cs"
+"Assets/TreeManager.cs"
 -langversion:9.0
 
 /deterministic
