@@ -33,16 +33,16 @@ public class TreeManager : MonoBehaviour
         treeDictionary.Add("coconut", coconut);
         treeDictionary.Add("squirrel", squirrel);
 
-        treeMoney.Add("pine", .010f);
-        treeMoney.Add("maple", .020f);
-        treeMoney.Add("oak", .030f);
-        treeMoney.Add("walnut", .004f);
-        treeMoney.Add("chestnut", .04f);
-        treeMoney.Add("coconut", .06f);
+        treeMoney.Add("pine", 1f);
+        treeMoney.Add("maple", 2f);
+        treeMoney.Add("oak", 3f);
+        treeMoney.Add("walnut", 4f);
+        treeMoney.Add("chestnut", 5f);
+        treeMoney.Add("coconut", 6f);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         foreach (TreeInfo tree in trees)
@@ -51,19 +51,24 @@ public class TreeManager : MonoBehaviour
         }
 
         int randomNum = Random.Range(0, 1000);
-        if(num_squirrel == 0 && trees.Count > 0 && randomNum < 5 && SceneManager.GetActiveScene().name == "exploration_scene")
+        if(num_squirrel == 0 && trees.Count > 0 && randomNum < 2 && SceneManager.GetActiveScene().name == "exploration_scene")
         {
-            num_squirrel += 1;
             int randomIndex = Random.Range(0, trees.Count);
+            if(trees[randomIndex].growth_percentage<5.0) return;
+            
+            num_squirrel = 1;
+
             trees[randomIndex].has_squirrel = true;
 
             GameObject map_gameobject = GameObject.Find("LocationBasedGame/Map");
             AbstractMap amap = map_gameobject.GetComponent<AbstractMap>();
             if (amap == null) Debug.Log("NO AMAP FOUND");
-            Vector3 scene_position = amap.GeoToWorldPosition(trees[randomIndex].lat_long_coordinate);
+            Vector3 scene_position = trees[randomIndex].tree_obj.transform.position;
+
+//amap.GeoToWorldPosition(trees[randomIndex].lat_long_coordinate);
             GameObject obj_to_spawn = treeDictionary["squirrel"];
 
-            Vector3 offset = new Vector3(0, 15, 0);
+            Vector3 offset = new Vector3(-15, 15, 0);
             scene_position += offset;
             GameObject new_object = Instantiate(obj_to_spawn);
             new_object.transform.position = scene_position;
@@ -99,14 +104,8 @@ public class TreeInfo
     public void UpdateTree(){
 
         if(growth_percentage <= 5.0f){
-            growth_percentage += 0.002f;
-            float scaleFactor = growth_percentage;
-            Vector3 newScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
-
-            if(tree_obj){
-                tree_obj.transform.localScale = newScale;
-
-            }
+            growth_percentage += 0.005f;
+            
 
         } else {
             if (has_squirrel)
@@ -118,6 +117,13 @@ public class TreeInfo
                 SeedManager.money += TreeManager.treeMoney[tree_type];
             }
             
+        }
+        float scaleFactor = growth_percentage * .5f;
+        Vector3 newScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
+
+        if(tree_obj){
+            tree_obj.transform.localScale = newScale;
+
         }
     }
 }

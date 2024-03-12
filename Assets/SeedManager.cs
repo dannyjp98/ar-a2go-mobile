@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SeedManager : MonoBehaviour
 {
     public static float money = 0.0f;
+    static bool gotReward = false;
 
     public GameObject seedShop;
     static Dictionary<string, int> seed_quantity = new Dictionary<string, int>();
@@ -50,6 +51,13 @@ public class SeedManager : MonoBehaviour
 
     public void ToggleShop(){
         seedShop.SetActive(!seedShop.activeSelf);
+    }
+
+    public static void grantReward(){
+        if(!gotReward){
+            money += 500;
+            gotReward = true;
+        }
     }
 
     public void buySeed(string seed_type){

@@ -35,10 +35,21 @@
 		{
 			_locationProvider.OnLocationUpdated -= LocationProvider_OnLocationUpdated;
 			_map.Initialize(location.LatitudeLongitude, _map.AbsoluteZoom);
+			StartCoroutine(Example());
 
 			
-			List<TreeInfo> trees = TreeManager.GetTrees();
+		}
 
+		IEnumerator Example()
+		{
+			Debug.Log(Time.time);
+			yield return new WaitForSeconds(0.5f);
+			Debug.Log(Time.time);
+			spawnstuff();
+		}
+		void spawnstuff(){
+
+			List<TreeInfo> trees = TreeManager.GetTrees();
 			foreach(TreeInfo tree in trees){
 				GameObject map_gameobject = GameObject.Find("LocationBasedGame/Map");
 				AbstractMap amap = map_gameobject.GetComponent<AbstractMap>();
@@ -65,15 +76,17 @@
 				float scaleFactor = tree.growth_percentage;
 				Vector3 newScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
 				new_object.transform.localScale = newScale;
-
+				Debug.Log(tree);
 				if (tree.has_squirrel)
 				{
                     GameObject squirrel_obj = TreeManager.treeDictionary["squirrel"];
 
-					Vector3 offset = new Vector3(0, 15, 0);
+					Vector3 offset = new Vector3(-15, 15, 0);
                     GameObject squirrel = Instantiate(squirrel_obj);
-                    squirrel.transform.position = scene_position + offset + randomOffset;
-                    squirrel.transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+					scene_position = tree.tree_obj.transform.position;
+
+                    squirrel.transform.position = scene_position + offset;
+                    squirrel.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
                 }
 			}
 		}

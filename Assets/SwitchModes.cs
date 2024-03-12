@@ -25,9 +25,12 @@ public class SwitchModes : MonoBehaviour
 
             List<TreeInfo> trees = TreeManager.GetTrees();
             float min_dist = 9999.9f;
+            nearest_tree = null;
             foreach(TreeInfo tree in trees){
                 Vector3 scene_position = amap.GeoToWorldPosition(tree.lat_long_coordinate);
                 float dist = Vector3.Distance(player_obj.transform.position,scene_position);
+                Debug.Log(dist);
+                if(dist > 30) break;
                 if(dist < min_dist){
                     min_dist = dist;
                     nearest_tree = tree;

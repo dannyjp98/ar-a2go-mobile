@@ -23,7 +23,8 @@ public class ARObjectSpawner : MonoBehaviour
     {
         GameObject new_obj = Instantiate(obj);
         new_obj.transform.SetPositionAndRotation(Camera.main.transform.position, Camera.main.transform.rotation);
-        new_obj.GetComponent<Rigidbody>().velocity = Camera.main.transform.forward * 50;
+
+        new_obj.GetComponent<Rigidbody>().velocity = Camera.main.transform.forward * 20;
         AudioSource.PlayClipAtPoint(acorn_spawn_noise, Camera.main.transform.position);
     }
 
@@ -34,12 +35,21 @@ public class ARObjectSpawner : MonoBehaviour
 
     void Start(){
         GameObject new_object = Instantiate(TreeManager.treeDictionary[TreeManager.nearestTree.tree_type]);
-        float newsize = TreeManager.nearestTree.growth_percentage * 0.1f;
+        
+        Vector3 newPos = Camera.main.transform.position + (Camera.main.transform.forward * 2);
+        newPos.y = -1;
+        new_object.transform.position = newPos;
+
+        float newsize = 1f;
+        
         new_object.transform.localScale = new Vector3(newsize, newsize, newsize);
         if (TreeManager.nearestTree.has_squirrel)
         {
             GameObject squirrel_obj = Instantiate(squirrel_prefab);
-            squirrel_obj.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            squirrel_obj.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+            squirrel_obj.transform.position = newPos;
+            squirrel_obj.transform.Rotate(0, 180, 0);
+
 
         }
 

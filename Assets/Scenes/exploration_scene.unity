@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641228, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -414,6 +414,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 18706216}
+    - targetCorrespondingSourceObject: {fileID: 1830384805603906379, guid: a6afbe932a59f4848b96cb4867a576e9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 18706220}
   m_SourcePrefab: {fileID: 100100000, guid: a6afbe932a59f4848b96cb4867a576e9, type: 3}
 --- !u!224 &18706214 stripped
 RectTransform:
@@ -440,6 +444,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seed_type_name: acorn
+--- !u!114 &18706220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18706215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &28806755
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +707,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 65658918}
+    - targetCorrespondingSourceObject: {fileID: 1830384805603906379, guid: a6afbe932a59f4848b96cb4867a576e9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 65658922}
   m_SourcePrefab: {fileID: 100100000, guid: a6afbe932a59f4848b96cb4867a576e9, type: 3}
 --- !u!224 &65658916 stripped
 RectTransform:
@@ -714,6 +737,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seed_type_name: oak
+--- !u!114 &65658922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65658917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &78370757
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,6 +855,7 @@ GameObject:
   - component: {fileID: 97859726}
   - component: {fileID: 97859725}
   - component: {fileID: 97859724}
+  - component: {fileID: 97859729}
   m_Layer: 0
   m_Name: LandmarkArb
   m_TagString: Untagged
@@ -924,6 +963,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 694020458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &97859729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97859723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deeec54cc2ec94d26897c9a4dd4234c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoPanel: {fileID: 1420810423}
+  seedToUnlock: {fileID: 1191004635}
+  newSprite: {fileID: 21300000, guid: c03de96e2a6d6450ea60a9e556466c08, type: 3}
+  uiImage: {fileID: 1123016602}
+  landmarkInfo: Nichols Arboretum, locally known as the Arb, is an arboretum operated
+    by the Matthaei Botanical Gardens and Nichols Arboretum at the University of
+    Michigan.
+  landmarkText: {fileID: 1528998386}
 --- !u!1 &110505683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,6 +1130,7 @@ GameObject:
   - component: {fileID: 136422294}
   - component: {fileID: 136422293}
   - component: {fileID: 136422292}
+  - component: {fileID: 136422297}
   m_Layer: 0
   m_Name: LandmarkArtMuseum
   m_TagString: Untagged
@@ -1178,6 +1238,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 694020458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136422297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136422291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deeec54cc2ec94d26897c9a4dd4234c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoPanel: {fileID: 1420810423}
+  seedToUnlock: {fileID: 623357544}
+  newSprite: {fileID: 21300000, guid: ab1353b1b12fb4367ae23453cc82706a, type: 3}
+  uiImage: {fileID: 1123016602}
+  landmarkInfo: The University of Michigan Museum of Art in Ann Arbor, Michigan with
+    94,000 sq ft is one of the largest university art museums in the United States.
+  landmarkText: {fileID: 1528998386}
 --- !u!1 &137357532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1523,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1388796831}
+    - targetCorrespondingSourceObject: {fileID: 1830384805603906379, guid: a6afbe932a59f4848b96cb4867a576e9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1388796835}
   m_SourcePrefab: {fileID: 100100000, guid: a6afbe932a59f4848b96cb4867a576e9, type: 3}
 --- !u!1 &192093989
 GameObject:
@@ -2170,6 +2253,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445421366}
   m_CullTransparentMesh: 1
+--- !u!1 &454672104 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4417276953964962167, guid: a6afbe932a59f4848b96cb4867a576e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 298231973}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &475845652 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1094528686802348, guid: 35ce2bb4caba9434db5e656796b632b1,
@@ -2560,6 +2649,7 @@ GameObject:
   - component: {fileID: 612487018}
   - component: {fileID: 612487017}
   - component: {fileID: 612487016}
+  - component: {fileID: 612487021}
   m_Layer: 0
   m_Name: LandmarkPalmerTent
   m_TagString: Untagged
@@ -2667,6 +2757,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 694020458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &612487021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612487015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deeec54cc2ec94d26897c9a4dd4234c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoPanel: {fileID: 1420810423}
+  seedToUnlock: {fileID: 454672104}
+  newSprite: {fileID: 21300000, guid: 27aca287797864db486b5fdc654ceec2, type: 3}
+  uiImage: {fileID: 1123016602}
+  landmarkInfo: Located just minutes from the Diag, the domed Palmer Field Temporary
+    Facility is your place to keep up with your fitness and well-being goals while
+    the new CCRB is under construction.
+  landmarkText: {fileID: 1528998386}
+--- !u!1 &623357544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4417276953964962167, guid: a6afbe932a59f4848b96cb4867a576e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1237780977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &652042998
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,7 +2939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc822450e5ed4c78bcaf343786dbcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pine: {fileID: 5294909667625427947, guid: 730e5328d77e36f40972cfb07d3eb24b, type: 3}
+  pine: {fileID: -927199367670048503, guid: 0fcc914d8624c1e4d9468bca52ef0a58, type: 3}
   maple: {fileID: 1040732873719044970, guid: fc1cdfcafb0ff284ba841751096d3260, type: 3}
   oak: {fileID: 8469412724436655980, guid: 01fc9f4723f9508409fda56acc3bb038, type: 3}
   walnut: {fileID: 6780008388913783769, guid: a9c61a7a64286ff47bafbdf2f2aad351, type: 3}
@@ -3790,8 +3906,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 557361065}
   m_HandleRect: {fileID: 557361064}
   m_Direction: 0
-  m_Value: -0.00000014917318
-  m_Size: 0.7823636
+  m_Value: 0
+  m_Size: 0.78155667
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3839,6 +3955,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5373864763419411618, guid: a6afbe932a59f4848b96cb4867a576e9,
     type: 3}
   m_PrefabInstance: {fileID: 1362593597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1095065653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4417276953964962167, guid: a6afbe932a59f4848b96cb4867a576e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1214634989}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1123016599
 GameObject:
@@ -4175,6 +4297,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1191004635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4417276953964962167, guid: a6afbe932a59f4848b96cb4867a576e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2015675166}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1200967583
 GameObject:
   m_ObjectHideFlags: 0
@@ -4209,7 +4337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -126.5, y: -15}
+  m_AnchoredPosition: {x: -3.9, y: -15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1200967585
@@ -4599,6 +4727,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seed_type_name: maple
+--- !u!114 &1226647531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226647523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1237780977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5011,6 +5154,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1226647527}
+    - targetCorrespondingSourceObject: {fileID: 1830384805603906379, guid: a6afbe932a59f4848b96cb4867a576e9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1226647531}
   m_SourcePrefab: {fileID: 100100000, guid: a6afbe932a59f4848b96cb4867a576e9, type: 3}
 --- !u!1 &1388796827 stripped
 GameObject:
@@ -5031,6 +5178,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seed_type_name: pine
+--- !u!114 &1388796835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388796827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1420810423
 GameObject:
   m_ObjectHideFlags: 0
@@ -5459,7 +5621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPanel: {fileID: 1420810423}
-  seedToUnlock: {fileID: 1928080515}
+  seedToUnlock: {fileID: 1899442550}
   newSprite: {fileID: 21300000, guid: 71568bcaa4f2d4d47ab336764cde668f, type: 3}
   uiImage: {fileID: 1123016602}
   landmarkInfo: "Opened in 1913, and named after Arthur Hill (1847-1909), who served
@@ -5614,6 +5776,7 @@ GameObject:
   - component: {fileID: 1615554132}
   - component: {fileID: 1615554131}
   - component: {fileID: 1615554130}
+  - component: {fileID: 1615554133}
   m_Layer: 5
   m_Name: MoneyText
   m_TagString: Untagged
@@ -5637,7 +5800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -119.2, y: -15.37}
+  m_AnchoredPosition: {x: 3.7, y: -15.37}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1615554130
@@ -5694,6 +5857,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615554128}
   m_CullTransparentMesh: 1
+--- !u!114 &1615554133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615554128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1622150180
 GameObject:
   m_ObjectHideFlags: 0
@@ -6210,6 +6388,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1804202217}
+    - targetCorrespondingSourceObject: {fileID: 1830384805603906379, guid: a6afbe932a59f4848b96cb4867a576e9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1804202221}
   m_SourcePrefab: {fileID: 100100000, guid: a6afbe932a59f4848b96cb4867a576e9, type: 3}
 --- !u!224 &1804202215 stripped
 RectTransform:
@@ -6236,6 +6418,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seed_type_name: walnut
+--- !u!114 &1804202221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804202216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1824179404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6403,6 +6600,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1824179407}
+    - targetCorrespondingSourceObject: {fileID: 1830384805603906379, guid: a6afbe932a59f4848b96cb4867a576e9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1824179411}
   m_SourcePrefab: {fileID: 100100000, guid: a6afbe932a59f4848b96cb4867a576e9, type: 3}
 --- !u!224 &1824179405 stripped
 RectTransform:
@@ -6429,11 +6630,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seed_type_name: chestnut
---- !u!1 &1928080515 stripped
+--- !u!114 &1824179411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824179406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!1 &1899442550 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4417276953964962167, guid: a6afbe932a59f4848b96cb4867a576e9,
     type: 3}
-  m_PrefabInstance: {fileID: 799042400}
+  m_PrefabInstance: {fileID: 2006623171}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1928080516 stripped
 RectTransform:
@@ -7239,6 +7455,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2033006375}
+    - targetCorrespondingSourceObject: {fileID: 1830384805603906379, guid: a6afbe932a59f4848b96cb4867a576e9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2033006379}
   m_SourcePrefab: {fileID: 100100000, guid: a6afbe932a59f4848b96cb4867a576e9, type: 3}
 --- !u!224 &2033006373 stripped
 RectTransform:
@@ -7265,6 +7485,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seed_type_name: coconut
+--- !u!114 &2033006379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033006374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2061039168
 GameObject:
   m_ObjectHideFlags: 0
@@ -7278,6 +7513,7 @@ GameObject:
   - component: {fileID: 2061039171}
   - component: {fileID: 2061039170}
   - component: {fileID: 2061039169}
+  - component: {fileID: 2061039174}
   m_Layer: 0
   m_Name: LandmarkBBB
   m_TagString: Untagged
@@ -7385,6 +7621,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 694020458}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2061039174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061039168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deeec54cc2ec94d26897c9a4dd4234c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infoPanel: {fileID: 1420810423}
+  seedToUnlock: {fileID: 1095065653}
+  newSprite: {fileID: 21300000, guid: 4d345167f2e3c4f89bc59f27fed35054, type: 3}
+  uiImage: {fileID: 1123016602}
+  landmarkInfo: The Bob and Betty Beyster Building, completed in 2005 and built with
+    alumni funds, is the home of CSE and a destination for events and gatherings
+    on the U-M North Campus.
+  landmarkText: {fileID: 1528998386}
 --- !u!1 &2082911863
 GameObject:
   m_ObjectHideFlags: 0

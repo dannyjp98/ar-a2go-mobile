@@ -26,7 +26,7 @@ public class InventoryButtonEvents : MonoBehaviour
 
         obj.SpawnAtCursor(TreeManager.treeDictionary[name]);
         SeedManager.AddQuantity(name, -1);
-        TreeManager.createTree(name, EditorLocationProviderLocationLog.current_player_position);
+        TreeManager.createTree(name, LocationProviderFactory.Instance.DefaultLocationProvider.CurrentLocation.LatitudeLongitude);
        
     }
 

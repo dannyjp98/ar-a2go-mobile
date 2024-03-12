@@ -74132,6 +74132,6 @@ const Il2CppGenericMethodFunctionsDefinitions g_Il2CppGenericMethodFunctions[741
 { 83180, 73873, 8618, 12751},
 { 83181, 73874, 11407, -1},
 { 83182, 73875, 11407, -1},
+{ 89550, 0, 0, -1},
 { 89551, 0, 0, -1},
-{ 89552, 0, 0, -1},
 };
