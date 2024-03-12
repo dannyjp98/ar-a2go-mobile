@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{EEEA7F92-7F24-40FC-A787-EF41A79C1E3F}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c03f022f-8924-4e3c-b7af-31db24c39b6b" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SeedManager.cs">
+    <Files>
+      <File FileName="Assets/InventoryButtonEvents.cs" Line="37" Column="27" />
+      <File FileName="Assets/components/ARObjectSpawner.cs" Line="42" Column="64" />
+      <File FileName="Assets/SeedManager.cs" Line="23" Column="37" />
+      <File FileName="Assets/SquirrelInteraction.cs" Line="28" Column="42" />
+      <File FileName="Assets/TreeManager.cs" Line="22" Column="31" />
+      <File FileName="Assets/SpawnTrees.cs" Line="82" Column="1" />
+      <File FileName="Assets/SeedQuantityText.cs" Line="1" Column="1" />
+      <File FileName="Assets/other/Mapbox/Unity/Map/InitializeMapWithLocationProvider.cs" Line="77" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="498p2" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="components" expanded="True" />
+              <Node name="other" expanded="True">
+                <Node name="Mapbox" expanded="True">
+                  <Node name="Unity" expanded="True">
+                    <Node name="Map" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -39,13 +39,16 @@ ScriptsOnlyBuild:
     - Mapbox.Unity.Map.AbstractMap
     - Mapbox.Unity.Map.InitializeMapWithLocationProvider
     - Mapbox.Unity.Map.MapVisualizer
-    - Mapbox.Unity.Utilities.Runnable
     - OrbitPlayer
     - SeedManager
     - SeedQuantityText
     - SpawnTrees
+    - SquirrelInteraction
     - SwitchModes
     - TreeManager
+    - clickDetector
+    - compassscript
+    - moneytext
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
@@ -57,6 +60,9 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TextMeshProUGUI
     Unity.XR.ARCore.Editor.dll:
     - UnityEditor.XR.ARCore.ARCoreSettings
     Unity.XR.ARCore.dll:
@@ -112,7 +118,6 @@ ScriptsOnlyBuild:
     Unity.XR.Simulation.Editor.dll:
     - UnityEditor.XR.Simulation.SimulationEnvironmentAssetsManager
     - UnityEditor.XR.Simulation.XREnvironmentViewManager
-    - UnityEditor.XR.Simulation.XRSimulationPreferencesEditor
     - UnityEditor.XR.Simulation.XRSimulationSettings
     Unity.XR.Simulation.dll:
     - UnityEngine.XR.Simulation.SimulatedBoundedPlane
@@ -144,6 +149,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Mask
@@ -199,6 +205,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
     - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
     - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
@@ -221,14 +228,56 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: InventoryButtonEvents
-    methodName: onClickMaple
+    fullTypeName: SeedManager
+    methodName: buySeed
+  - assembly: Assembly-CSharp
+    fullTypeName: SeedManager
+    methodName: buySeed
+  - assembly: Assembly-CSharp
+    fullTypeName: SeedManager
+    methodName: buySeed
   - assembly: Assembly-CSharp
     fullTypeName: InventoryButtonEvents
-    methodName: onClickPine
+    methodName: onClick
+  - assembly: Assembly-CSharp
+    fullTypeName: SeedManager
+    methodName: buySeed
+  - assembly: Assembly-CSharp
+    fullTypeName: SeedManager
+    methodName: buySeed
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryButtonEvents
+    methodName: onClick
+  - assembly: Assembly-CSharp
+    fullTypeName: SeedManager
+    methodName: buySeed
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryButtonEvents
+    methodName: onClick
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryButtonEvents
+    methodName: onClick
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryButtonEvents
+    methodName: onClick
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryButtonEvents
+    methodName: onClick
+  - assembly: Assembly-CSharp
+    fullTypeName: SeedManager
+    methodName: buySeed
+  - assembly: Assembly-CSharp
+    fullTypeName: InventoryButtonEvents
+    methodName: shootAcorn
   - assembly: Assembly-CSharp
     fullTypeName: SwitchModes
     methodName: SwitchScene
+  - assembly: Assembly-CSharp
+    fullTypeName: clickDetector
+    methodName: hideInfo
+  - assembly: Assembly-CSharp
+    fullTypeName: SeedManager
+    methodName: ToggleShop
   sceneClasses:
     Assets/Scenes/exploration_scene.unity:
     - Class: 1
@@ -250,6 +299,8 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
+      Script: {instanceID: 0}
+    - Class: 54
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
@@ -274,117 +325,127 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1720}
+      Script: {instanceID: 1716}
     - Class: 114
-      Script: {instanceID: 1732}
+      Script: {instanceID: 1728}
     - Class: 114
-      Script: {instanceID: 1918}
+      Script: {instanceID: 1916}
     - Class: 114
-      Script: {instanceID: 1934}
+      Script: {instanceID: 1932}
     - Class: 114
-      Script: {instanceID: 2092}
+      Script: {instanceID: 2090}
     - Class: 114
-      Script: {instanceID: 2440}
+      Script: {instanceID: 2438}
     - Class: 114
-      Script: {instanceID: 2660}
+      Script: {instanceID: 2658}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 2684}
     - Class: 114
-      Script: {instanceID: 2746}
+      Script: {instanceID: 2744}
     - Class: 114
-      Script: {instanceID: 2954}
+      Script: {instanceID: 2952}
     - Class: 114
-      Script: {instanceID: 3050}
+      Script: {instanceID: 3048}
     - Class: 114
-      Script: {instanceID: 3106}
+      Script: {instanceID: 3104}
     - Class: 114
-      Script: {instanceID: 3198}
+      Script: {instanceID: 3196}
     - Class: 114
-      Script: {instanceID: 3398}
+      Script: {instanceID: 3396}
     - Class: 114
-      Script: {instanceID: 3492}
+      Script: {instanceID: 3490}
     - Class: 114
-      Script: {instanceID: 3712}
+      Script: {instanceID: 3710}
     - Class: 114
-      Script: {instanceID: 4164}
+      Script: {instanceID: 4110}
     - Class: 114
-      Script: {instanceID: 4296}
+      Script: {instanceID: 4148}
     - Class: 114
-      Script: {instanceID: 4468}
+      Script: {instanceID: 4166}
     - Class: 114
-      Script: {instanceID: 4530}
+      Script: {instanceID: 4298}
     - Class: 114
-      Script: {instanceID: 4714}
+      Script: {instanceID: 4470}
     - Class: 114
-      Script: {instanceID: 4808}
+      Script: {instanceID: 4532}
     - Class: 114
-      Script: {instanceID: 4898}
+      Script: {instanceID: 4716}
     - Class: 114
-      Script: {instanceID: 5026}
+      Script: {instanceID: 4810}
     - Class: 114
-      Script: {instanceID: 5136}
+      Script: {instanceID: 4900}
     - Class: 114
-      Script: {instanceID: 5354}
+      Script: {instanceID: 5028}
     - Class: 114
-      Script: {instanceID: 5376}
+      Script: {instanceID: 5138}
     - Class: 114
-      Script: {instanceID: 5482}
+      Script: {instanceID: 5356}
     - Class: 114
-      Script: {instanceID: 5894}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 6256}
+      Script: {instanceID: 5484}
     - Class: 114
-      Script: {instanceID: 6318}
+      Script: {instanceID: 5710}
     - Class: 114
-      Script: {instanceID: 6614}
+      Script: {instanceID: 5898}
     - Class: 114
-      Script: {instanceID: 7406}
+      Script: {instanceID: 6260}
     - Class: 114
-      Script: {instanceID: 7424}
+      Script: {instanceID: 6322}
     - Class: 114
-      Script: {instanceID: 7524}
+      Script: {instanceID: 6618}
     - Class: 114
-      Script: {instanceID: 7600}
+      Script: {instanceID: 6954}
     - Class: 114
-      Script: {instanceID: 7738}
+      Script: {instanceID: 7412}
     - Class: 114
-      Script: {instanceID: 7990}
+      Script: {instanceID: 7430}
+    - Class: 114
+      Script: {instanceID: 7530}
+    - Class: 114
+      Script: {instanceID: 7606}
+    - Class: 114
+      Script: {instanceID: 7744}
     - Class: 114
       Script: {instanceID: 7996}
     - Class: 114
-      Script: {instanceID: 8076}
+      Script: {instanceID: 8002}
     - Class: 114
-      Script: {instanceID: 8132}
+      Script: {instanceID: 8082}
     - Class: 114
-      Script: {instanceID: 8298}
+      Script: {instanceID: 8138}
     - Class: 114
-      Script: {instanceID: 8516}
+      Script: {instanceID: 8304}
     - Class: 114
-      Script: {instanceID: 8876}
+      Script: {instanceID: 8522}
     - Class: 114
-      Script: {instanceID: 9096}
+      Script: {instanceID: 8650}
     - Class: 114
-      Script: {instanceID: 9336}
+      Script: {instanceID: 8764}
     - Class: 114
-      Script: {instanceID: 9352}
+      Script: {instanceID: 8884}
     - Class: 114
-      Script: {instanceID: 10084}
+      Script: {instanceID: 9104}
     - Class: 114
-      Script: {instanceID: 10298}
+      Script: {instanceID: 9344}
     - Class: 114
-      Script: {instanceID: 10408}
+      Script: {instanceID: 9360}
     - Class: 114
-      Script: {instanceID: 10714}
+      Script: {instanceID: 10092}
     - Class: 114
-      Script: {instanceID: 10908}
+      Script: {instanceID: 10306}
     - Class: 114
-      Script: {instanceID: 11246}
+      Script: {instanceID: 10416}
     - Class: 114
-      Script: {instanceID: 12258}
+      Script: {instanceID: 10722}
     - Class: 114
-      Script: {instanceID: 12406}
+      Script: {instanceID: 10916}
     - Class: 114
-      Script: {instanceID: 37578}
+      Script: {instanceID: 11254}
+    - Class: 114
+      Script: {instanceID: 12266}
+    - Class: 114
+      Script: {instanceID: 12414}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -434,7 +495,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -449,43 +514,45 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1684}
+      Script: {instanceID: 1680}
     - Class: 114
-      Script: {instanceID: 1860}
+      Script: {instanceID: 1804}
     - Class: 114
-      Script: {instanceID: 3398}
+      Script: {instanceID: 1858}
     - Class: 114
-      Script: {instanceID: 3500}
+      Script: {instanceID: 3396}
     - Class: 114
-      Script: {instanceID: 3712}
+      Script: {instanceID: 3498}
     - Class: 114
-      Script: {instanceID: 4462}
+      Script: {instanceID: 3710}
     - Class: 114
-      Script: {instanceID: 5106}
+      Script: {instanceID: 4464}
     - Class: 114
-      Script: {instanceID: 5208}
+      Script: {instanceID: 5108}
     - Class: 114
-      Script: {instanceID: 5388}
+      Script: {instanceID: 5210}
     - Class: 114
-      Script: {instanceID: 7890}
+      Script: {instanceID: 5390}
     - Class: 114
-      Script: {instanceID: 8516}
+      Script: {instanceID: 7896}
     - Class: 114
-      Script: {instanceID: 8558}
+      Script: {instanceID: 8522}
     - Class: 114
-      Script: {instanceID: 9336}
+      Script: {instanceID: 8564}
     - Class: 114
-      Script: {instanceID: 9862}
+      Script: {instanceID: 9344}
     - Class: 114
-      Script: {instanceID: 10140}
+      Script: {instanceID: 9870}
     - Class: 114
-      Script: {instanceID: 10222}
+      Script: {instanceID: 10148}
     - Class: 114
-      Script: {instanceID: 11150}
+      Script: {instanceID: 10230}
     - Class: 114
-      Script: {instanceID: 11818}
+      Script: {instanceID: 11158}
     - Class: 114
-      Script: {instanceID: 12040}
+      Script: {instanceID: 11826}
+    - Class: 114
+      Script: {instanceID: 12048}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -543,6 +610,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.XR.LegacyInputHelpers
     namespaceName: UnityEngine.XR.LegacyInputHelpers
     className: ArmModel
+  - hash:
+      serializedVersion: 2
+      Hash: 634458ed2be3d0b7a1953015baf46598
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SquirrelInteraction
   - hash:
       serializedVersion: 2
       Hash: e46ef85fefbd22ad17e337d5e8704e26
@@ -863,7 +936,7 @@ ScriptsOnlyBuild:
     className: SceneData
   - hash:
       serializedVersion: 2
-      Hash: a65744caa7d0c63aed4c488a6c8933b8
+      Hash: 0be8f96af2b77de9163aee54a64ee556
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ARObjectSpawner
@@ -977,6 +1050,12 @@ ScriptsOnlyBuild:
     className: OnScreenButton
   - hash:
       serializedVersion: 2
+      Hash: f3b0879099b45196242cd815ca1fe5dc
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: compassscript
+  - hash:
+      serializedVersion: 2
       Hash: 1014038eaef7fa38142f9d8e71a6cd5a
     assemblyName: Unity.XR.OpenXR
     namespaceName: UnityEngine.XR.OpenXR.Features.Interactions
@@ -987,6 +1066,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 8002f12aa2dee305d412c4a2574669e3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: moneytext
   - hash:
       serializedVersion: 2
       Hash: 915204dac8acad99f076d6e72ada0a0f
@@ -1403,6 +1488,12 @@ ScriptsOnlyBuild:
     className: TrackedDeviceRaycaster
   - hash:
       serializedVersion: 2
+      Hash: b9f83a7b20c51c97597a03fd12808391
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SpawnTrees
+  - hash:
+      serializedVersion: 2
       Hash: 4718916586b3818eb69bf65df61f0f3a
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1595,7 +1686,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 81c8f6858d69251f32dca389884565be
+      Hash: 9b2d76775143650fb69c0b2280d19c05
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: TreeManager
@@ -1629,6 +1720,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARTrackedImageManager
+  - hash:
+      serializedVersion: 2
+      Hash: 7a7f7f39a6228e7ba244a1e3a1d0a602
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: toggleShopBtn
   - hash:
       serializedVersion: 2
       Hash: ca0b1e5e177d32220d685f0060cc8de5
@@ -2045,6 +2142,12 @@ ScriptsOnlyBuild:
     className: AnimatorMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 9ba93e23f1e94117d86c2a5db31b8ed3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: clickDetector
+  - hash:
+      serializedVersion: 2
       Hash: 33656f83bb0079184b2206a69690ec46
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -2441,7 +2544,7 @@ ScriptsOnlyBuild:
     className: ReloadMap
   - hash:
       serializedVersion: 2
-      Hash: 1d02232953535a5998d269ad3c192420
+      Hash: d1dd045bb6c09178bc34a97d5f59543c
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: SeedManager
@@ -2919,14 +3022,8 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ImageDataFetcher
-  - hash:
-      serializedVersion: 2
-      Hash: c9a23cef405d38a8b41c2503a6abf6cd
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SpawnTrees
   platform: 9
   scenePathNames:
   - Assets/Scenes/exploration_scene.unity
   - Assets/Scenes/interaction_scene.unity
-  playerPath: /Users/dannypark/Documents/eecs498/build10
+  playerPath: /Volumes/PRO-G40/498p2/ios_build
