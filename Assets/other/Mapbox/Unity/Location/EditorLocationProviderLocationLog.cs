@@ -58,7 +58,7 @@
 		    public AbstractMap map; // Reference to your Mapbox map
 
 		public static Vector2d current_player_position = new Vector2d(42.279594,-83.732124);
-		float speed = 0.0001f;
+		float speed = 0.00003f;
 
 		private void Update(){
 			if(Input.GetKey(KeyCode.RightArrow)){
@@ -74,6 +74,7 @@
 			if(Input.GetKey(KeyCode.DownArrow)){
 				current_player_position += new Vector2d(-speed,0);
 			}
+			
 
 			Location new_location = new Location();
 			new_location.LatitudeLongitude = current_player_position;

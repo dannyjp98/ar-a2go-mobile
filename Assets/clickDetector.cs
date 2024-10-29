@@ -8,6 +8,10 @@ public class clickDetector : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject infoPanel;
+    public GameObject busPanel;
+    public GameObject player;
+    public GameObject currLandmark;
+
     public GameObject seedToUnlock;
 
     public Sprite newSprite;
@@ -20,6 +24,7 @@ public class clickDetector : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.Find("PlayerTarget");
         infoPanel.SetActive(false);
     }
     void Update()
@@ -41,6 +46,9 @@ public class clickDetector : MonoBehaviour
     }
     void OnClick()
     {
+        player = GameObject.Find("PlayerTarget");
+
+        if((player.transform.position - gameObject.transform.position).magnitude > 20f) return;
         landmarkText.text = landmarkInfo;
         uiImage.sprite = newSprite;
         // Do something when this GameObject is clicked
@@ -52,5 +60,11 @@ public class clickDetector : MonoBehaviour
     {
         Debug.Log("hide info");
         infoPanel.SetActive(false);
+    }
+
+    public void hideInfoBus()
+    {
+        Debug.Log("hide info");
+        busPanel.transform.localScale = new Vector3(0f, 1f, 1f); // This will double the scale in all three axes
     }
 }

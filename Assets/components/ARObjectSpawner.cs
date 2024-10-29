@@ -25,7 +25,7 @@ public class ARObjectSpawner : MonoBehaviour
         new_obj.transform.SetPositionAndRotation(Camera.main.transform.position, Camera.main.transform.rotation);
 
         new_obj.GetComponent<Rigidbody>().velocity = Camera.main.transform.forward * 20;
-        AudioSource.PlayClipAtPoint(acorn_spawn_noise, Camera.main.transform.position);
+        AudioSource.PlayClipAtPoint(acorn_spawn_noise, Camera.main.transform.position, 3f);
     }
 
     public void SwitchModes()
@@ -47,10 +47,8 @@ public class ARObjectSpawner : MonoBehaviour
         {
             GameObject squirrel_obj = Instantiate(squirrel_prefab);
             squirrel_obj.transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-            squirrel_obj.transform.position = newPos;
+            squirrel_obj.transform.position = newPos + new Vector3(0f, 0f, -.5f);
             squirrel_obj.transform.Rotate(0, 180, 0);
-
-
         }
 
 

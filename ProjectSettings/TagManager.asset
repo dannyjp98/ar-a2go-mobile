@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - acorn_obj
+  - player
+  - buspanel
   layers:
   - Default
   - TransparentFX

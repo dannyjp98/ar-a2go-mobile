@@ -14,7 +14,7 @@ public class compassscript : MonoBehaviour
     void Update()
     {
        transform.eulerAngles = new Vector3(0,
-            0,
+            -90,
             -90);
     }
 }

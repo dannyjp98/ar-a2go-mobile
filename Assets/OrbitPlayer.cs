@@ -14,7 +14,7 @@ public class OrbitPlayer : MonoBehaviour
         if(Input.GetMouseButton(0)){
             //Debug.Log("holding left mouse button");
             float mouseX = Input.GetAxis("Mouse X"); // Get the horizontal movement of the mouse
-            Debug.Log(Input.GetAxis("Mouse X"));
+            //Debug.Log(Input.GetAxis("Mouse X"));
             float mouseY = Input.GetAxis("Mouse Y"); // Get the horizontal movement of the mouse
 
             transform.Rotate(-mouseY*3, mouseX*3, 0);
